@@ -3,6 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Health & Medical</title>
+
+	<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase/init.js"></script>
+	<script src="js/healthData-record.js"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -22,6 +29,7 @@
 
 </head>
 <body>
+
 	<!-- navbar top -->
 	<div class="navbar-top">
 		<div class="side-nav-panel-left">
@@ -84,66 +92,108 @@
 		</ul>
 	</div>
 
-	<!-- services -->
-	<div class="section services bg-second">
+
+	<!-- Health Info -->
+	<div class="section appointment">
 		<div class="container">
 			<div class="section-head">
-				<h4>Services</h4>
+				<br>
+				<br>
+				<br>
+				<h4>Weight</h4>
 				<div class="underline"></div>
 			</div>
-			<div class="row">
-				<div class="col s6">
-					<div class="content">
-						<i class="fa fa-tint"></i>
-						<a href="health-monitor.html"><h5>Health Monitor</h5></a>
-						<span>Health monitoring system</span>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="content">
-						<i class="fa fa-eye"></i>
-						<a href="home-shop.html"><h5>My Medications</h5></a>
-						<span>Check Medications and Shop Mecidine Store</span>
-					</div>
-				</div>
+			<div class="content">
+				<form action="">
+					<input type="number" placeholder="kg" id="weight">
+					<!-- <button onclick="submit()" id="submit"> Submit </button> -->
+				</form>
 			</div>
-			<div class="row">
-				<div class="col s6">
-					<div class="content">
-						<i class="fa fa-toggle-off"></i>
-						<a href="call-doctor.html"><h5>Call My Doctor</h5></a>
-						<span>Find the best doctor for you</span>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="content">
-						<i class="fa fa-street-view"></i>
-						<a href="doctor.html"><h5>Find Doctors</h5></a>
-						<span>Find the Hospital closest to you</span>
-					</div>
-				</div>
+			
+			<div class="section-head">
+				<br>
+				<h4>Height</h4>
+				<div class="underline"></div>
 			</div>
-			<div class="row">
-					<div class="col s6">
-						<div class="content">
-							<i class="fa fa-tint"></i>
-							<a href="health-monitor.html"><h5>Active Wear</h5></a>
-							<span>Health monitoring system</span>
-						</div>
-					</div>
-					<div class="col s6">
-						<div class="content">
-							<i class="fa fa-eye"></i>
-							<a href="home-shop.html"><h5>Sleep Cycle</h5></a>
-							<span>Check Medications and Shop Mecidine Store</span>
-						</div>
-					</div>
+			<div class="content">
+				<form action="">
+					<input type="number" placeholder="cm" id="height">
+				</form>
+			</div>
+			
+			<div class="section-head">
+				<br>
+				<h4>Food</h4>
+				<div class="underline"></div>
+			</div>
+			<div class="content">
+				<form action="">
+					<input type="number" placeholder="kcal" id="calories">
+				</form>
+			</div>
+			
+			<div class="section-head">
+				<br>
+				<h4>Heart Rate</h4>
+				<div class="underline"></div>
+			</div>
+			<div class="content">
+				<form action="">
+					<input type="number" placeholder="bpm" id="heart_rate">
+				</form>
+			</div>
+			
+			<div class="section-head">
+				<br>
+				<h4>Blood Pressure</h4>
+				<div class="underline"></div>
+			</div>
+			<div class="content">
+				<form action="">
+					<input type="number" placeholder="mmHg" id="blood_pressure">
+				</form>
+			</div>
+			
+			<div class="section-head">
+				<br>
+				<h4>Sleeping Time</h4>
+				<div class="underline"></div>
+			</div>
+			<div class="content">
+				<form action="">
+					<input type="number" placeholder="hrs" id="sleeping time">
+				</form>
+			</div>
+			<div class="section-head">
+					<br>
+					<h4>Activewear</h4>
+					<div class="underline"></div>
 				</div>
+			<div class="content">
+					<form action="">
+						<select name="Activewears" id="activewear" >
+							<option value="Fitbit">Fitbit</option>
+							<option value="Apple Watch">Apple Watch</option>
+							<option value="Samsumg Watch">Samsumg Watch</option>
+							<option value="Xiaomi Band">Xiaomi Band</option>
+						</select>
+					</form>
+				</div>
+			<!-- <div class="section-head">
+					<br>
+					<h4>Submit Records</h4>
+					<div class="underline"></div>
+				</div>
+			<div class="content" style="text-align: center;">
+		
+				<button onclick="submit()" id="submit"> Submit </button>
+				
+			</div> -->
+			
 		</div>
 	</div>
-	<!-- end services -->
-	
-	
+	<!-- end appointment -->
+
 	<!-- loader -->
 	<div id="fakeLoader"></div>
 	<!-- end loader -->

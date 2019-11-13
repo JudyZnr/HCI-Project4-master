@@ -18,7 +18,8 @@ const auth = firebase.auth();
 function signUp(){
     var email = document.getElementById("email")
     var password = document.getElementById("password")
-
+    window.location.href = "file:///Users/nairongzhang/Documents/fall2019/IntroHCI/HCI-Project4-master/HCI-P4-website/home_uninit.html"
+    
     const promise = auth.createUserWithEmailAndPassword(email.value,password.value)    
     alert("Signed Up")
 }
