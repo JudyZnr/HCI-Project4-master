@@ -3,12 +3,48 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Health & Medical</title>
-
+<!-- 
 	<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase/init.js"></script>
-	<script src="js/healthData-record.js"></script>
+	<script src="js/healthData-record.js"></script> -->
+	<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-database.js"></script>
+        
+        
+    <script src="js/index.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDQ2b_s4pzDKzaa8LBKCEYOhC9Q340A5Lc",
+                authDomain: "test-13e37.firebaseapp.com",
+                databaseURL: "https://test-13e37.firebaseio.com",
+                projectId: "test-13e37",
+                storageBucket: "test-13e37.appspot.com",
+                messagingSenderId: "617422185612",
+                appId: "1:617422185612:web:c3512e94609e21a540c7a9",
+                measurementId: "G-KMP9FC3S1B"
+            };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+    
+            function writeData() {
+                firebase.database().ref("User").set({
+                    weight: document.getElementById("weightField").value,
+					height: document.getElementById("heightField").value,
+					calories: document.getElementById("caloriesField").value,
+					heartRate: document.getElementById("heart_rate").value,
+					bloodPressure: document.getElementById("blood_pressure").value,
+					sleepingTime: document.getElementById("sleeping_time").value,
+					activewear: document.getElementById("active_wear").value
+					
+                });
+            }
+    
+        </script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
 	<meta name="mobile-web-app-capable" content="yes">
@@ -100,85 +136,27 @@
 				<br>
 				<br>
 				<br>
-				<h4>Weight</h4>
+				<h4>Record or Update Persoanl Data</h4>
 				<div class="underline"></div>
 			</div>
 			<div class="content">
-				<form action="">
-					<input type="number" placeholder="kg" id="weight">
-					<!-- <button onclick="submit()" id="submit"> Submit </button> -->
-				</form>
+				<input type="number" placeholder="kg" id="weightField">
+				<input type="number" placeholder="cm" id="heightField">
+				<input type="number" placeholder="kcal" id="caloriesField">
+				<input type="number" placeholder="bpm" id="heart_rate">
+				<input type="number" placeholder="mmHg" id="blood_pressure">
+				<input type="number" placeholder="hrs" id="sleeping_time">
+				<select name="Activewears" id="active_wear" >
+						<option value="Fitbit">Fitbit</option>
+						<option value="Apple Watch">Apple Watch</option>
+						<option value="Samsumg Watch">Samsumg Watch</option>
+						<option value="Xiaomi Band">Xiaomi Band</option>
+					</select> 
+
+				<button onclick="writeData()" style="text-align: center;"> Submit </button>
+		 -->
 			</div>
 			
-			<div class="section-head">
-				<br>
-				<h4>Height</h4>
-				<div class="underline"></div>
-			</div>
-			<div class="content">
-				<form action="">
-					<input type="number" placeholder="cm" id="height">
-				</form>
-			</div>
-			
-			<div class="section-head">
-				<br>
-				<h4>Food</h4>
-				<div class="underline"></div>
-			</div>
-			<div class="content">
-				<form action="">
-					<input type="number" placeholder="kcal" id="calories">
-				</form>
-			</div>
-			
-			<div class="section-head">
-				<br>
-				<h4>Heart Rate</h4>
-				<div class="underline"></div>
-			</div>
-			<div class="content">
-				<form action="">
-					<input type="number" placeholder="bpm" id="heart_rate">
-				</form>
-			</div>
-			
-			<div class="section-head">
-				<br>
-				<h4>Blood Pressure</h4>
-				<div class="underline"></div>
-			</div>
-			<div class="content">
-				<form action="">
-					<input type="number" placeholder="mmHg" id="blood_pressure">
-				</form>
-			</div>
-			
-			<div class="section-head">
-				<br>
-				<h4>Sleeping Time</h4>
-				<div class="underline"></div>
-			</div>
-			<div class="content">
-				<form action="">
-					<input type="number" placeholder="hrs" id="sleeping time">
-				</form>
-			</div>
-			<div class="section-head">
-					<br>
-					<h4>Activewear</h4>
-					<div class="underline"></div>
-				</div>
-			<div class="content">
-					<form action="">
-						<select name="Activewears" id="activewear" >
-							<option value="Fitbit">Fitbit</option>
-							<option value="Apple Watch">Apple Watch</option>
-							<option value="Samsumg Watch">Samsumg Watch</option>
-							<option value="Xiaomi Band">Xiaomi Band</option>
-						</select>
-					</form>
-				</div>
 			<!-- <div class="section-head">
 					<br>
 					<h4>Submit Records</h4>
