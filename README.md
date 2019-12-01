@@ -9,6 +9,8 @@ The two main components are represented as the <strong>google-assistant-logic</s
 
 The working copy of the health concierge app dashboard can be viewed here: https://d2awussa5so553.cloudfront.net/ which serves as an interface for the Google Assistant interactions for the dashboard, telemedicine services, and the pharmaceutical delivery.
 
+A demo Youtube link can be found here: https://youtu.be/_UkySqaI5l4
+
 Thank you,
 
 Daniel Hwang, Judy Zhang, Ride Bu
